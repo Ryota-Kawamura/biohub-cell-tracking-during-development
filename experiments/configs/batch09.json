@@ -1,0 +1,38 @@
+{
+  "biohub-b09-kgain15": {
+    "base": "k953",
+    "note": "k953 with the coordinate-refinement shift scaled x1.5 (node count unchanged)",
+    "env": {
+      "V1284_GAIN": "1.5"
+    },
+    "patches": [
+      [
+        "shift = bounded(head, (x-mean)/scale).cpu().numpy() / SPACING",
+        "shift = bounded(head, (x-mean)/scale).cpu().numpy() / SPACING * float(os.environ.get(\"V1284_GAIN\", \"1\"))"
+      ],
+      [
+        "*SPACING,axis=1)) > 2.00001:",
+        "*SPACING,axis=1)) > 2.00001 * max(1.0, float(os.environ.get(\"V1284_GAIN\", \"1\"))):"
+      ]
+    ],
+    "version": 1
+  },
+  "biohub-b09-kgain05": {
+    "base": "k953",
+    "note": "k953 with the coordinate-refinement shift scaled x0.5 (node count unchanged)",
+    "env": {
+      "V1284_GAIN": "0.5"
+    },
+    "patches": [
+      [
+        "shift = bounded(head, (x-mean)/scale).cpu().numpy() / SPACING",
+        "shift = bounded(head, (x-mean)/scale).cpu().numpy() / SPACING * float(os.environ.get(\"V1284_GAIN\", \"1\"))"
+      ],
+      [
+        "*SPACING,axis=1)) > 2.00001:",
+        "*SPACING,axis=1)) > 2.00001 * max(1.0, float(os.environ.get(\"V1284_GAIN\", \"1\"))):"
+      ]
+    ],
+    "version": 1
+  }
+}

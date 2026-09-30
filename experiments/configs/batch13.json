@@ -1,0 +1,36 @@
+{
+  "biohub-b13-secetta10": {
+    "base": "k953",
+    "note": "b11-khead4 + secondary edge-feature TTA weight 0.75 -> 1.0 (from a new public notebook; edges only)",
+    "env": {
+      "BIOHUB_SECONDARY_EDGE_FEATURE_TTA_WEIGHT": "1.0"
+    },
+    "patches": [
+      [
+        "rglob('biohub-v1284-head-s075/v1284_head.pt')",
+        "rglob('biohub-headtrain/v1284_head.pt')"
+      ]
+    ],
+    "kernel_sources": [
+      "ryotakawamura94/biohub-headtrain"
+    ],
+    "version": 1
+  },
+  "biohub-b13-bonus075": {
+    "base": "k953",
+    "note": "b11-khead4 + MOTION_RELINK_LEARNED_BONUS 1.0 -> 0.75 (raising it lost in b03)",
+    "env": {
+      "BIOHUB_MOTION_RELINK_LEARNED_BONUS": "0.75"
+    },
+    "patches": [
+      [
+        "rglob('biohub-v1284-head-s075/v1284_head.pt')",
+        "rglob('biohub-headtrain/v1284_head.pt')"
+      ]
+    ],
+    "kernel_sources": [
+      "ryotakawamura94/biohub-headtrain"
+    ],
+    "version": 1
+  }
+}

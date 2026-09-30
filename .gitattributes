@@ -1,0 +1,8 @@
+# Kaggle runs on Linux: keep LF line endings everywhere.
+* text=auto eol=lf
+*.ipynb text eol=lf
+
+# Language stats: the notebooks are mostly forks of public notebooks and the
+# scorer is vendored, so count only the code written here.
+notebooks/** linguist-vendored
+third_party/** linguist-vendored

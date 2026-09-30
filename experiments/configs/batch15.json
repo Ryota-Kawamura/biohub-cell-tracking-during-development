@@ -1,0 +1,48 @@
+{
+  "biohub-b15-shift125f": {
+    "base": "k953",
+    "note": "b11-khead4 with the head shift scaled x1.25 (the shrunken ensemble lost 0.002)",
+    "env": {},
+    "patches": [
+      [
+        "rglob('biohub-v1284-head-s075/v1284_head.pt')",
+        "rglob('biohub-headtrain/v1284_head.pt')"
+      ],
+      [
+        "shift = bounded(head, (x-mean)/scale).cpu().numpy() / SPACING",
+        "shift = bounded(head, (x-mean)/scale).cpu().numpy() * 1.25 / SPACING"
+      ],
+      [
+        "axis=1)) > 2.00001:",
+        "axis=1)) > 4.00001:"
+      ]
+    ],
+    "kernel_sources": [
+      "ryotakawamura94/biohub-headtrain"
+    ],
+    "version": 1
+  },
+  "biohub-b15-shift150f": {
+    "base": "k953",
+    "note": "b11-khead4 with the head shift scaled x1.5",
+    "env": {},
+    "patches": [
+      [
+        "rglob('biohub-v1284-head-s075/v1284_head.pt')",
+        "rglob('biohub-headtrain/v1284_head.pt')"
+      ],
+      [
+        "shift = bounded(head, (x-mean)/scale).cpu().numpy() / SPACING",
+        "shift = bounded(head, (x-mean)/scale).cpu().numpy() * 1.5 / SPACING"
+      ],
+      [
+        "axis=1)) > 2.00001:",
+        "axis=1)) > 4.00001:"
+      ]
+    ],
+    "kernel_sources": [
+      "ryotakawamura94/biohub-headtrain"
+    ],
+    "version": 1
+  }
+}

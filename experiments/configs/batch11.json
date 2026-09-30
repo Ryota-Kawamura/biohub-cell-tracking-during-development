@@ -1,0 +1,17 @@
+{
+  "biohub-b11-khead4": {
+    "base": "k953",
+    "note": "k953 with our V1284 head retrained in the notebook's output frame (ds coords x4, no centre offset); held-out residual 1.06 vs public 1.33 um",
+    "env": {},
+    "patches": [
+      [
+        "rglob('biohub-v1284-head-s075/v1284_head.pt')",
+        "rglob('biohub-headtrain/v1284_head.pt')"
+      ]
+    ],
+    "kernel_sources": [
+      "ryotakawamura94/biohub-headtrain"
+    ],
+    "version": 1
+  }
+}

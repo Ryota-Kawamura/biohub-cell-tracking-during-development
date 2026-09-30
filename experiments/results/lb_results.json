@@ -1,0 +1,177 @@
+{
+ "biohub-b01-base": {
+  "desc": "biohub-b01-base: baseline with the built-in sweep off - anchors every later comparison",
+  "score": 0.946,
+  "scored_seen_at": "2026-09-23T15:40+00:00"
+ },
+ "biohub-b01-div10": {
+  "desc": "biohub-b01-div10: negative control: SAFE_DIV_DIVERGE_UM 2.25 -> 1.0, proxy said -0.008",
+  "score": 0.941,
+  "scored_seen_at": "2026-09-23T15:40+00:00"
+ },
+ "biohub-b01-div45": {
+  "desc": "biohub-b01-div45: push past the 3.0 that gained: SAFE_DIV_DIVERGE_UM 2.25 -> 4.5",
+  "score": 0.941,
+  "scored_seen_at": "2026-09-23T15:40+00:00"
+ },
+ "biohub-b01-tight55": {
+  "desc": "biohub-b01-tight55: MOTION_RELINK_TIGHT_UM 6.0 -> 5.5, the value the built-in sweep chose for v0001",
+  "score": 0.946,
+  "scored_seen_at": "2026-09-23T15:40+00:00"
+ },
+ "biohub-b02-det960": {
+  "desc": "biohub-b02-det960: prediction stage, never probed: DET_THRESHOLD 0.965 -> 0.960, on top of tight55",
+  "score": 0.946,
+  "scored_seen_at": "2026-09-23T15:40+00:00"
+ },
+ "biohub-b02-det970": {
+  "desc": "biohub-b02-det970: prediction stage, never probed: DET_THRESHOLD 0.965 -> 0.970, on top of tight55",
+  "score": 0.945,
+  "scored_seen_at": "2026-09-23T15:40+00:00"
+ },
+ "biohub-b02-ilpdiv15": {
+  "desc": "biohub-b02-ilpdiv15: prediction stage, never probed: ILP_DIVISION_WEIGHT 1.2 -> 1.5, on top of tight55",
+  "score": 0.946,
+  "scored_seen_at": "2026-09-23T15:40+00:00"
+ },
+ "biohub-b03-bonus25": {
+  "desc": "biohub-b03-bonus25: relink trusts the network more: MOTION_RELINK_LEARNED_BONUS 1.0 -> 2.5 (um)",
+  "score": 0.945,
+  "scored_seen_at": "2026-09-23T22:50+00:00"
+ },
+ "biohub-b03-bonus50": {
+  "desc": "biohub-b03-bonus50: relink nearly always keeps ILP edges in gate: MOTION_RELINK_LEARNED_BONUS 1.0 -> 5.0 (um)",
+  "score": 0.946,
+  "scored_seen_at": "2026-09-23T23:51+00:00"
+ },
+ "biohub-b03-norelink": {
+  "desc": "biohub-b03-norelink: relink off, ILP edges used as-is: OUTPUT_MOTION_RELINK 1 -> 0",
+  "score": 0.946,
+  "scored_seen_at": "2026-09-23T23:51+00:00"
+ },
+ "biohub-b04-glight": {
+  "desc": "biohub-b04-glight: geofusion light: its sweep-selected combo fixed, validator/sweep off (-3.4h runtime, timeout insurance)",
+  "score": 0.947,
+  "scored_seen_at": "2026-09-24T08:20+00:00"
+ },
+ "biohub-b05-gbase": {
+  "desc": "biohub-b05-gbase: geofusion pipeline with its sweep off and no overrides: separates the pipeline from the combo",
+  "score": 0.946,
+  "scored_seen_at": "2026-09-24T15:40+00:00"
+ },
+ "biohub-b05-gedge": {
+  "desc": "biohub-b05-gedge: geofusion base + relink-only pieces of its combo (tight55 + vel025): edges change, node count does not",
+  "score": 0.946,
+  "scored_seen_at": "2026-09-24T15:40+00:00"
+ },
+ "biohub-b06-gnoleaf": {
+  "desc": "biohub-b06-gnoleaf: glight minus leaf prune: the combo without its only node-removing piece",
+  "score": 0.947,
+  "scored_seen_at": "2026-09-24T16:30+00:00"
+ },
+ "biohub-b06-ivel": {
+  "desc": "biohub-b06-ivel: infer (v0001 line) + tight55 + vel025: the same relink-only change as b05-gedge on the other pipeline",
+  "score": 0.946,
+  "scored_seen_at": "2026-09-24T16:30+00:00"
+ },
+ "biohub-b08-kcombo": {
+  "desc": "biohub-b08-kcombo: k953 + the pieces of Geometric Fusion's combo that helped there: velocity 0.25, wider division gates 11/16/12, DeepCenter safe-div 0.15",
+  "score": 0.953,
+  "scored_seen_at": "2026-09-25T06:56+00:00"
+ },
+ "biohub-b08-kdiv": {
+  "desc": "biohub-b08-kdiv: k953 + division part only: wider gates 11/16/12 and DeepCenter safe-div 0.15",
+  "score": 0.953,
+  "scored_seen_at": "2026-09-25T07:22+00:00"
+ },
+ "biohub-b09-kgain05": {
+  "desc": "biohub-b09-kgain05: k953 with the coordinate-refinement shift scaled x0.5 (node count unchanged)",
+  "score": 0.945,
+  "scored_seen_at": "2026-09-25T15:17+00:00"
+ },
+ "biohub-b09-kgain15": {
+  "desc": "biohub-b09-kgain15: k953 with the coordinate-refinement shift scaled x1.5 (node count unchanged)",
+  "score": 0.949,
+  "scored_seen_at": "2026-09-25T15:17+00:00"
+ },
+ "biohub-b10-khead": {
+  "desc": "biohub-b10-khead: k953 with our V1284 head retrained on all 199 train movies (held-out residual 1.06 um vs public head 1.30 um)",
+  "score": 0.943,
+  "scored_seen_at": "2026-09-27T00:21+00:00"
+ },
+ "biohub-b11-khead4": {
+  "desc": "biohub-b11-khead4: k953 with our V1284 head retrained in the notebook's output frame (ds coords x4, no centre offset); held-out residual 1.06 vs public 1.33 um",
+  "score": 0.953,
+  "scored_seen_at": "2026-09-27T07:35+00:00"
+ },
+ "biohub-b12-khead4combo": {
+  "desc": "biohub-b12-khead4combo: b11-khead4 (our output-frame head) + kcombo linking settings",
+  "score": 0.953,
+  "scored_seen_at": "2026-09-27T15:50+00:00"
+ },
+ "biohub-b13-bonus075": {
+  "desc": "biohub-b13-bonus075: b11-khead4 + MOTION_RELINK_LEARNED_BONUS 1.0 -> 0.75 (raising it lost in b03)",
+  "score": 0.953,
+  "scored_seen_at": "2026-09-28T09:03+00:00"
+ },
+ "biohub-b13-secetta10": {
+  "desc": "biohub-b13-secetta10: b11-khead4 + secondary edge-feature TTA weight 0.75 -> 1.0 (from a new public notebook; edges only)",
+  "score": 0.953,
+  "scored_seen_at": "2026-09-28T09:03+00:00"
+ },
+ "biohub-b14-headens5": {
+  "desc": "biohub-b14-headens5: b11-khead4 with a 5-seed ensemble of the retrained head (packed into one 160-unit head)",
+  "score": 0.951,
+  "scored_seen_at": "2026-09-28T15:03+00:00"
+ },
+ "biohub-b15-shift125f": {
+  "desc": "biohub-b15-shift125f: b11-khead4 with the head shift scaled x1.25 (the shrunken ensemble lost 0.002)",
+  "score": 0.948,
+  "scored_seen_at": "2026-09-29T04:36+00:00"
+ },
+ "biohub-b15-shift150f": {
+  "desc": "biohub-b15-shift150f: b11-khead4 with the head shift scaled x1.5",
+  "score": 0.947,
+  "scored_seen_at": "2026-09-29T04:36+00:00"
+ },
+ "biohub-b16-shift080": {
+  "desc": "biohub-b16-shift080: b11-khead4 with the head shift scaled x0.8",
+  "score": 0.951,
+  "scored_seen_at": "2026-09-29T11:36+00:00"
+ },
+ "biohub-b16-shift200": {
+  "desc": "biohub-b16-shift200: b11-khead4 with the head shift scaled x2.0",
+  "score": 0.93,
+  "scored_seen_at": "2026-09-29T11:36+00:00"
+ },
+ "biohub-b17-s125bonus075": {
+  "desc": "biohub-b17-s125bonus075: b11-khead4, head shift x1.25 + learned relink bonus 0.75",
+  "score": 0.949,
+  "scored_seen_at": "2026-09-29T11:36+00:00"
+ },
+ "biohub-b17-s125secetta": {
+  "desc": "biohub-b17-s125secetta: b11-khead4, head shift x1.25 + secondary edge-TTA weight 1.0",
+  "score": 0.948,
+  "scored_seen_at": "2026-09-29T11:36+00:00"
+ },
+ "biohub-b18-s150secetta": {
+  "desc": "biohub-b18-s150secetta: b11-khead4, head shift x1.5 + secondary edge-TTA weight 1.0",
+  "score": 0.947,
+  "scored_seen_at": "2026-09-29T11:36+00:00"
+ },
+ "biohub-infer": {
+  "desc": "biohub-infer: SAFE_DIV_DIVERGE_UM 2.25 -> 3.0 (proxy +0.0005) - launched before the batch tool existed",
+  "score": 0.945,
+  "scored_seen_at": "2026-09-23T15:40+00:00"
+ },
+ "biohub-k953": {
+  "desc": "biohub-k953: kunaldesale2408/biohub-cell-tracking run unmodified (public 0.953, v1284 coordinate-refinement head)",
+  "score": 0.953,
+  "scored_seen_at": "2026-09-25T06:56+00:00"
+ },
+ "v0001 baseline": {
+  "desc": "v0001 baseline: Harmonic Fusion fork as-is (commit 9dc5971)",
+  "score": 0.947,
+  "scored_seen_at": "2026-09-23T15:40+00:00"
+ }
+}

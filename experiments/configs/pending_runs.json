@@ -1,0 +1,22 @@
+{
+ "update-github-description": {
+  "after": "2026-09-30T00:30Z",
+  "action": "done: private 0.924, rank 183/4017, Silver medal",
+  "done": true
+ },
+ "launch-last-shots": {
+  "after": "2026-09-28T16:00Z",
+  "action": "at most 2 GPU kernels at a time; launch in order when the previous pair is COMPLETE: python scripts/batch.py --config experiments/configs/batch16.json launch, then batch17.json, then batch18.json. Mark done after batch18.",
+  "done": true
+ },
+ "launch-b14-headens5": {
+  "after": "2026-09-27T16:00Z",
+  "action": "done: headtrain v4 ensemble train residual 0.992 vs single 1.006 um; b14 launched",
+  "done": true
+ },
+ "headtrain": {
+  "after": "2026-09-26T05:30Z",
+  "action": "done: our head beat the public one (1.06 vs 1.30 um); submitted as biohub-b10-khead",
+  "done": true
+ }
+}

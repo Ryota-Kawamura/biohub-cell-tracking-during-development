@@ -1,0 +1,43 @@
+# Competition data: not redistributable, and large. See data/README.md.
+data/*
+!data/README.md
+
+# Generated files
+artifacts/
+*.zarr/
+*.geff/
+*.ckpt
+*.pt
+*.pth
+*.npy
+*.npz
+*.zip
+*.log
+*.json.gz
+submission.csv
+notebooks/**/output/
+
+# Kernel outputs that are third-party code or caches, not ours to publish
+submissions/feedback/**/tracking_repo/
+submissions/feedback/**/secondary_seed_weights/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+*.egg-info/
+
+# Editors / local tool settings
+.DS_Store
+.vscode/
+.idea/
+.claude/settings.local.json
+
+# Credentials (normally in ~/.kaggle/, listed here as a safety net)
+.kaggle/
+kaggle.json
+credentials.json
+access_token

@@ -1,0 +1,37 @@
+submission,kernel,base,change,public_lb,note
+v0001,biohub-infer@1,infer,"public Harmonic Fusion fork, built-in sweep picked tight55",0.947,reproduces the source notebook; full run 1h55m
+biohub-infer v4,biohub-infer@4,infer,SAFE_DIV_DIVERGE_UM 2.25 -> 3.0,0.945,proxy predicted +0.0005; LB moved the other way
+b01-base,biohub-b01-base@1,infer,built-in sweep off (controlled baseline),0.946,anchor for every later comparison
+b01-tight55,biohub-b01-tight55@1,infer,MOTION_RELINK_TIGHT_UM 6.0 -> 5.5,0.946,alone it does not reproduce v0001's 0.947
+b01-div10,biohub-b01-div10@1,infer,SAFE_DIV_DIVERGE_UM 2.25 -> 1.0,0.941,negative control
+b01-div45,biohub-b01-div45@1,infer,SAFE_DIV_DIVERGE_UM 2.25 -> 4.5,0.941,
+b02-det960,biohub-b02-det960@2,infer,DET_THRESHOLD 0.965 -> 0.960 (+tight55),0.946,detection stage
+b02-det970,biohub-b02-det970@2,infer,DET_THRESHOLD 0.965 -> 0.970 (+tight55),0.945,detection stage
+b02-ilpdiv15,biohub-b02-ilpdiv15@1,infer,ILP_DIVISION_WEIGHT 1.2 -> 1.5 (+tight55),0.946,linking stage
+b03-bonus25,biohub-b03-bonus25@1,infer,MOTION_RELINK_LEARNED_BONUS 1.0 -> 2.5,0.945,relink trusts edge probabilities more
+b03-bonus50,biohub-b03-bonus50@1,infer,MOTION_RELINK_LEARNED_BONUS 1.0 -> 5.0,0.946,
+b03-norelink,biohub-b03-norelink@1,infer,OUTPUT_MOTION_RELINK 1 -> 0,0.946,relink off entirely: no change on the LB
+geofusion,biohub-geofusion@1,geofusion,"public Geometric Fusion notebook, unmodified",timeout,exceeded the 12 h limit on the hidden test (validator + sweep included)
+b04-glight,biohub-b04-glight@1,geofusion,"geofusion's selected combo fixed, validator/sweep off",0.947,identical output to geofusion in 26 min; public 0.948 not reproduced
+b05-gbase,biohub-b05-gbase@1,geofusion,"geofusion pipeline, no overrides, sweep off",0.946,the pipeline alone equals the infer baseline
+b05-gedge,biohub-b05-gedge@1,geofusion,"relink-only part of the combo (tight 5.5, velocity 0.25)",0.946,edge-only change: no gain
+b06-gnoleaf,biohub-b06-gnoleaf@1,geofusion,glight without leaf pruning,0.947,leaf pruning is not the piece that helps
+b06-ivel,biohub-b06-ivel@1,infer,"relink-only change (tight 5.5, velocity 0.25) on Harmonic Fusion",0.946,relink change does nothing on either pipeline
+k953,biohub-k953@1,k953,"public 0.953 notebook (coordinate-refinement head), unmodified",0.953,"public rank 151 / 3,898 (silver zone on the public LB)"
+b08-kcombo,biohub-b08-kcombo@2,k953,"k953 + velocity 0.25, wider division gates, DeepCenter safe-div 0.15",0.953,no change at 3 decimals
+b08-kdiv,biohub-b08-kdiv@2,k953,"k953 + wider division gates 11/16/12, DeepCenter safe-div 0.15",0.953,no change at 3 decimals
+b09-kgain15,biohub-b09-kgain15@1,k953,refinement shift x1.5,0.949,stronger shift loses
+b09-kgain05,biohub-b09-kgain05@1,k953,refinement shift x0.5,0.945,"weaker shift loses more, below the unrefined pipeline"
+b10-khead,biohub-b10-khead@1,k953,V1284 head retrained on 199 train movies,0.943,"lower held-out residual (1.06 vs 1.30 um) but LB drops; likely coordinate-convention mismatch"
+b11-khead4,biohub-b11-khead4@1,k953,V1284 head retrained in the output frame (zyx_ds4),0.953,"ties k953; the frame fix recovers the 0.010 lost by b10-khead"
+b12-khead4combo,biohub-b12-khead4combo@1,k953,b11 head + kcombo linking settings,0.953,"ties; linking settings add nothing on top of the retrained head"
+b13-secetta10,biohub-b13-secetta10@1,k953,b11 + secondary edge-TTA weight 0.75 -> 1.0,0.953,"ties"
+b13-bonus075,biohub-b13-bonus075@1,k953,b11 + learned relink bonus 1.0 -> 0.75,0.953,"ties"
+b14-headens5,biohub-b14-headens5@1,k953,b11 with a 5-seed ensemble of the retrained head,0.951,"-0.002; averaging seeds shrinks the shifts and loses"
+b15-shift125f,biohub-b15-shift125f@1,k953,b11 with head shift scale x1.25 (4 um displacement cap),0.948,"-0.005; larger shift hurts"
+b15-shift150f,biohub-b15-shift150f@1,k953,b11 with head shift scale x1.5 (4 um displacement cap),0.947,"-0.006"
+b16-shift200,biohub-b16-shift200@1,k953,b11 with head shift scale x2.0 (4 um cap),0.930,"-0.023"
+b16-shift080,biohub-b16-shift080@1,k953,b11 with head shift scale x0.8,0.951,"-0.002"
+b17-s125bonus075,biohub-b17-s125bonus075@1,k953,shift x1.25 + learned relink bonus 0.75,0.949,"-0.004"
+b17-s125secetta,biohub-b17-s125secetta@1,k953,shift x1.25 + secondary edge-TTA weight 1.0,0.948,"-0.005"
+b18-s150secetta,biohub-b18-s150secetta@1,k953,shift x1.5 + secondary edge-TTA weight 1.0,0.947,"-0.006"

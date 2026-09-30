@@ -1,0 +1,31 @@
+{
+  "biohub-b01-base": {
+    "note": "baseline with the built-in sweep off - anchors every later comparison",
+    "env": {}
+  },
+  "biohub-b01-div10": {
+    "note": "negative control: SAFE_DIV_DIVERGE_UM 2.25 -> 1.0, proxy said -0.008",
+    "env": {
+      "BIOHUB_SAFE_DIV_DIVERGE_UM": "1.0"
+    }
+  },
+  "biohub-b01-div45": {
+    "note": "push past the 3.0 that gained: SAFE_DIV_DIVERGE_UM 2.25 -> 4.5",
+    "env": {
+      "BIOHUB_SAFE_DIV_DIVERGE_UM": "4.5"
+    }
+  },
+  "biohub-b01-tight55": {
+    "note": "MOTION_RELINK_TIGHT_UM 6.0 -> 5.5, the value the built-in sweep chose for v0001",
+    "env": {
+      "BIOHUB_MOTION_RELINK_TIGHT_UM": "5.5"
+    }
+  },
+  "biohub-infer": {
+    "note": "SAFE_DIV_DIVERGE_UM 2.25 -> 3.0 (proxy +0.0005) - launched before the batch tool existed",
+    "env": {
+      "BIOHUB_SAFE_DIV_DIVERGE_UM": "3.0"
+    },
+    "version": 4
+  }
+}

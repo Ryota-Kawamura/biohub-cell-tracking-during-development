@@ -1,0 +1,305 @@
+{
+  "note": "Kaggle does not expose the weekly GPU quota through its API, so every run is booked here. The Kaggle UI is the source of truth; recalibrate when they drift.",
+  "weekly_hours": 30,
+  "calibration": {
+    "at": "2026-09-26T00:13Z",
+    "ui_used_hours": 0.0,
+    "ui_available_hours": 30.0,
+    "comment": "weekly reset; previous week moved to previous_week_runs"
+  },
+  "runs": [
+    {
+      "kernel": "biohub-cap-a",
+      "version": 1,
+      "hours": 3.5,
+      "note": "capture run (~100 train movies)"
+    },
+    {
+      "kernel": "biohub-cap-b",
+      "version": 1,
+      "hours": 3.5,
+      "note": "capture run (~100 train movies)"
+    },
+    {
+      "kernel": "biohub-cell-tracking-light-pipeline",
+      "version": 2,
+      "hours": 0.45,
+      "note": "public notebook run (not a submission)"
+    },
+    {
+      "kernel": "biohub-b10-khead",
+      "version": 1,
+      "hours": 0.45,
+      "note": "auto: light run"
+    },
+    {
+      "kernel": "biohub-b11-khead4",
+      "version": 1,
+      "hours": 0.45,
+      "note": "auto: light run"
+    },
+    {
+      "kernel": "biohub-b12-khead4combo",
+      "version": 1,
+      "hours": 0.45,
+      "note": "auto: light run"
+    },
+    {
+      "kernel": "biohub-b13-secetta10",
+      "version": 1,
+      "hours": 0.45,
+      "note": "auto: light run"
+    },
+    {
+      "kernel": "biohub-b13-bonus075",
+      "version": 1,
+      "hours": 0.45,
+      "note": "auto: light run"
+    },
+    {
+      "kernel": "biohub-b14-headens5",
+      "version": 1,
+      "hours": 0.45,
+      "note": "auto: light run"
+    },
+    {
+      "kernel": "biohub-b15-shift125",
+      "version": 1,
+      "hours": 0.45,
+      "note": "auto: light run"
+    },
+    {
+      "kernel": "biohub-b15-shift150",
+      "version": 1,
+      "hours": 0.45,
+      "note": "auto: light run"
+    },
+    {
+      "kernel": "biohub-b15-shift125f",
+      "version": 1,
+      "hours": 0.45,
+      "note": "auto: light run"
+    },
+    {
+      "kernel": "biohub-b15-shift150f",
+      "version": 1,
+      "hours": 0.45,
+      "note": "auto: light run"
+    },
+    {
+      "kernel": "biohub-b16-shift200",
+      "version": 1,
+      "hours": 0.45,
+      "note": "auto: light run"
+    },
+    {
+      "kernel": "biohub-b16-shift080",
+      "version": 1,
+      "hours": 0.45,
+      "note": "auto: light run"
+    },
+    {
+      "kernel": "biohub-b17-s125bonus075",
+      "version": 1,
+      "hours": 0.45,
+      "note": "auto: light run"
+    },
+    {
+      "kernel": "biohub-b17-s125secetta",
+      "version": 1,
+      "hours": 0.45,
+      "note": "auto: light run"
+    },
+    {
+      "kernel": "biohub-b18-s150secetta",
+      "version": 1,
+      "hours": 0.45,
+      "note": "auto: light run"
+    }
+  ],
+  "reset": {
+    "next_at": "2026-10-03T00:13Z",
+    "source": "weekly, Saturday ~00:13 UTC"
+  },
+  "previous_week_runs": [
+    {
+      "kernel": "biohub-infer",
+      "version": 1,
+      "hours": 1.92,
+      "note": "v0001 full run (built-in sweep on)"
+    },
+    {
+      "kernel": "biohub-sweep",
+      "version": 1,
+      "hours": 1.21,
+      "note": "sweep01, 8 samples"
+    },
+    {
+      "kernel": "biohub-sweep",
+      "version": 2,
+      "hours": 4.49,
+      "note": "sweep02, 48 samples + raw-graph cache"
+    },
+    {
+      "kernel": "biohub-gpusweep",
+      "version": 1,
+      "hours": 7.88,
+      "note": "9-candidate sweep"
+    },
+    {
+      "kernel": "biohub-infer",
+      "version": 4,
+      "hours": 0.45,
+      "note": "light submission run, 26.8 min"
+    },
+    {
+      "kernel": "biohub-b01-base",
+      "version": 1,
+      "hours": 0.45
+    },
+    {
+      "kernel": "biohub-b01-div10",
+      "version": 1,
+      "hours": 0.45
+    },
+    {
+      "kernel": "biohub-b01-div45",
+      "version": 1,
+      "hours": 0.45
+    },
+    {
+      "kernel": "biohub-b01-tight55",
+      "version": 1,
+      "hours": 0.45
+    },
+    {
+      "kernel": "biohub-b02-det960",
+      "version": 1,
+      "hours": 0.05,
+      "note": "stopped by the config drift guard"
+    },
+    {
+      "kernel": "biohub-b02-det970",
+      "version": 1,
+      "hours": 0.05,
+      "note": "same as above"
+    },
+    {
+      "kernel": "biohub-b02-det960",
+      "version": 2,
+      "hours": 0.45
+    },
+    {
+      "kernel": "biohub-b02-det970",
+      "version": 2,
+      "hours": 0.45
+    },
+    {
+      "kernel": "biohub-b02-ilpdiv15",
+      "version": 1,
+      "hours": 0.45
+    },
+    {
+      "kernel": "biohub-geofusion",
+      "version": 1,
+      "hours": 3.9,
+      "note": "public notebook as-is, long built-in sweep"
+    },
+    {
+      "kernel": "biohub-b03-bonus25",
+      "version": 1,
+      "hours": 0.45,
+      "note": "batch03 (manual)"
+    },
+    {
+      "kernel": "biohub-b03-bonus50",
+      "version": 1,
+      "hours": 0.45,
+      "note": "batch03 (manual)"
+    },
+    {
+      "kernel": "biohub-b03-norelink",
+      "version": 1,
+      "hours": 0.45,
+      "note": "batch03 (manual)"
+    },
+    {
+      "kernel": "biohub-b04-glight",
+      "version": 1,
+      "hours": 0.45,
+      "note": "auto: light run"
+    },
+    {
+      "kernel": "biohub-b05-gedge",
+      "version": 1,
+      "hours": 0.45,
+      "note": "auto: light run"
+    },
+    {
+      "kernel": "biohub-b05-gbase",
+      "version": 1,
+      "hours": 0.45,
+      "note": "auto: light run"
+    },
+    {
+      "kernel": "biohub-b06-gnoleaf",
+      "version": 1,
+      "hours": 0.45,
+      "note": "auto: light run"
+    },
+    {
+      "kernel": "biohub-b06-ivel",
+      "version": 1,
+      "hours": 0.45,
+      "note": "auto: light run"
+    },
+    {
+      "kernel": "biohub-k953",
+      "version": 1,
+      "hours": 0.45,
+      "note": "public 0.953 notebook, unmodified"
+    },
+    {
+      "kernel": "biohub-b08-kcombo",
+      "version": 1,
+      "hours": 0.01,
+      "note": "failed in 15 s (syntax error from the setdefault rewrite)"
+    },
+    {
+      "kernel": "biohub-b08-kdiv",
+      "version": 1,
+      "hours": 0.01,
+      "note": "failed in 15 s (syntax error from the setdefault rewrite)"
+    },
+    {
+      "kernel": "biohub-b08-kcombo",
+      "version": 2,
+      "hours": 0.45,
+      "note": "auto: light run"
+    },
+    {
+      "kernel": "biohub-b08-kdiv",
+      "version": 2,
+      "hours": 0.45,
+      "note": "auto: light run"
+    },
+    {
+      "kernel": "biohub-b09-kgain15",
+      "version": 1,
+      "hours": 0.45,
+      "note": "auto: light run"
+    },
+    {
+      "kernel": "biohub-b09-kgain05",
+      "version": 1,
+      "hours": 0.45,
+      "note": "auto: light run"
+    },
+    {
+      "kernel": "biohub-cap-smoke",
+      "version": 1,
+      "hours": 0.45,
+      "note": "auto: light run"
+    }
+  ]
+}

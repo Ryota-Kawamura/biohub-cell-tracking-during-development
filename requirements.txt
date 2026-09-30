@@ -1,0 +1,6 @@
+# Local tooling only; all heavy computation runs in Kaggle notebooks.
+kaggle>=2.2.4
+numpy
+pandas
+scipy
+matplotlib

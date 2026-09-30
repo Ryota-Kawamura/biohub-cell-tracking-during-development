@@ -1,0 +1,21 @@
+{
+  "biohub-b14-headens5": {
+    "base": "k953",
+    "note": "b11-khead4 with a 5-seed ensemble of the retrained head (packed into one 160-unit head)",
+    "env": {},
+    "patches": [
+      [
+        "rglob('biohub-v1284-head-s075/v1284_head.pt')",
+        "rglob('biohub-headtrain/v1284_head_ens5.pt')"
+      ],
+      [
+        "torch.nn.Linear(224, 32), torch.nn.SiLU(), torch.nn.Linear(32, 3)",
+        "torch.nn.Linear(224, 160), torch.nn.SiLU(), torch.nn.Linear(160, 3)"
+      ]
+    ],
+    "kernel_sources": [
+      "ryotakawamura94/biohub-headtrain"
+    ],
+    "version": 1
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "biohub-b08-kcombo": {
+    "base": "k953",
+    "note": "k953 + the pieces of Geometric Fusion's combo that helped there: velocity 0.25, wider division gates 11/16/12, DeepCenter safe-div 0.15",
+    "env": {
+      "BIOHUB_MOTION_RELINK_VELOCITY_WEIGHT": "0.25",
+      "BIOHUB_SAFE_DIV_MAX_UM": "11.0",
+      "BIOHUB_SAFE_DIV_SISTER_MAX_UM": "16.0",
+      "BIOHUB_SAFE_DIV_EXISTING_CHILD_MAX_UM": "12.0",
+      "BIOHUB_DEEPCENTER_SAFE_DIV_THRESHOLD": "0.15"
+    },
+    "version": 2
+  },
+  "biohub-b08-kdiv": {
+    "base": "k953",
+    "note": "k953 + division part only: wider gates 11/16/12 and DeepCenter safe-div 0.15",
+    "env": {
+      "BIOHUB_SAFE_DIV_MAX_UM": "11.0",
+      "BIOHUB_SAFE_DIV_SISTER_MAX_UM": "16.0",
+      "BIOHUB_SAFE_DIV_EXISTING_CHILD_MAX_UM": "12.0",
+      "BIOHUB_DEEPCENTER_SAFE_DIV_THRESHOLD": "0.15"
+    },
+    "version": 2
+  }
+}

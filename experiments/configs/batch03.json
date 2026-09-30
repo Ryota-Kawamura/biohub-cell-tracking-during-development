@@ -1,0 +1,23 @@
+{
+  "biohub-b03-bonus25": {
+    "note": "relink trusts the network more: MOTION_RELINK_LEARNED_BONUS 1.0 -> 2.5 (um)",
+    "env": {
+      "BIOHUB_MOTION_RELINK_LEARNED_BONUS": "2.5"
+    },
+    "version": 1
+  },
+  "biohub-b03-bonus50": {
+    "note": "relink nearly always keeps ILP edges in gate: MOTION_RELINK_LEARNED_BONUS 1.0 -> 5.0 (um)",
+    "env": {
+      "BIOHUB_MOTION_RELINK_LEARNED_BONUS": "5.0"
+    },
+    "version": 1
+  },
+  "biohub-b03-norelink": {
+    "note": "relink off, ILP edges used as-is: OUTPUT_MOTION_RELINK 1 -> 0",
+    "env": {
+      "BIOHUB_OUTPUT_MOTION_RELINK": "0"
+    },
+    "version": 1
+  }
+}

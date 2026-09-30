@@ -1,0 +1,26 @@
+{
+  "biohub-b02-det960": {
+    "note": "prediction stage, never probed: DET_THRESHOLD 0.965 -> 0.960, on top of tight55",
+    "env": {
+      "BIOHUB_MOTION_RELINK_TIGHT_UM": "5.5",
+      "BIOHUB_DET_THRESHOLD": "0.960"
+    },
+    "version": 2
+  },
+  "biohub-b02-det970": {
+    "note": "prediction stage, never probed: DET_THRESHOLD 0.965 -> 0.970, on top of tight55",
+    "env": {
+      "BIOHUB_MOTION_RELINK_TIGHT_UM": "5.5",
+      "BIOHUB_DET_THRESHOLD": "0.970"
+    },
+    "version": 2
+  },
+  "biohub-b02-ilpdiv15": {
+    "note": "prediction stage, never probed: ILP_DIVISION_WEIGHT 1.2 -> 1.5, on top of tight55",
+    "env": {
+      "BIOHUB_MOTION_RELINK_TIGHT_UM": "5.5",
+      "BIOHUB_ILP_DIVISION_WEIGHT": "1.5"
+    },
+    "version": 1
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "biohub-cap-a": {
+    "base": "k953",
+    "note": "capture run (not a submission): train movies 0..98 for retraining the V1284 head",
+    "env": {
+      "V1284_CAPTURE": "/kaggle/working/capture",
+      "CAPTURE_N": "99",
+      "CAPTURE_OFFSET": "0"
+    },
+    "patches": [
+      [
+        "os.environ['V1284_MODE']='candidate'",
+        "os.environ['V1284_MODE']='capture'"
+      ],
+      [
+        "test_stems = list_test_stems()",
+        "test_stems = list_test_stems()\n# Capture run: predict on a slice of train instead of the test set.\nTEST_DIR = COMP_DIR / \"train\"\n_cap_all = sorted(p.name[:-5] for p in TEST_DIR.iterdir() if p.name.endswith(\".zarr\"))\n_cap_off = int(os.environ.get(\"CAPTURE_OFFSET\", \"0\"))\ntest_stems = _cap_all[_cap_off:_cap_off + int(os.environ.get(\"CAPTURE_N\", \"8\"))]\nprint(\"capture stems:\", len(test_stems), test_stems[:5])"
+      ]
+    ],
+    "truncate_after": "Prediction completed in",
+    "append_cells": [
+      "# Pack the captured features into one archive (keeps the output file count small).\nimport shutil, pathlib\ncap = pathlib.Path(\"/kaggle/working/capture\")\nprint(\"captured movies:\", len(list(cap.iterdir())), \"files:\", sum(1 for _ in cap.rglob(\"*.npz\")))\nshutil.make_archive(\"/kaggle/working/capture\", \"tar\", cap)\nshutil.rmtree(cap)\nprint(\"wrote /kaggle/working/capture.tar\")"
+    ],
+    "version": 1
+  },
+  "biohub-cap-b": {
+    "base": "k953",
+    "note": "capture run (not a submission): train movies 99..198 for retraining the V1284 head",
+    "env": {
+      "V1284_CAPTURE": "/kaggle/working/capture",
+      "CAPTURE_N": "100",
+      "CAPTURE_OFFSET": "99"
+    },
+    "patches": [
+      [
+        "os.environ['V1284_MODE']='candidate'",
+        "os.environ['V1284_MODE']='capture'"
+      ],
+      [
+        "test_stems = list_test_stems()",
+        "test_stems = list_test_stems()\n# Capture run: predict on a slice of train instead of the test set.\nTEST_DIR = COMP_DIR / \"train\"\n_cap_all = sorted(p.name[:-5] for p in TEST_DIR.iterdir() if p.name.endswith(\".zarr\"))\n_cap_off = int(os.environ.get(\"CAPTURE_OFFSET\", \"0\"))\ntest_stems = _cap_all[_cap_off:_cap_off + int(os.environ.get(\"CAPTURE_N\", \"8\"))]\nprint(\"capture stems:\", len(test_stems), test_stems[:5])"
+      ]
+    ],
+    "truncate_after": "Prediction completed in",
+    "append_cells": [
+      "# Pack the captured features into one archive (keeps the output file count small).\nimport shutil, pathlib\ncap = pathlib.Path(\"/kaggle/working/capture\")\nprint(\"captured movies:\", len(list(cap.iterdir())), \"files:\", sum(1 for _ in cap.rglob(\"*.npz\")))\nshutil.make_archive(\"/kaggle/working/capture\", \"tar\", cap)\nshutil.rmtree(cap)\nprint(\"wrote /kaggle/working/capture.tar\")"
+    ],
+    "version": 1
+  }
+}
