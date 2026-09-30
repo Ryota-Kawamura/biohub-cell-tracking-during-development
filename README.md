@@ -21,6 +21,7 @@
 | **What made the difference** | Retraining the coordinate-refinement head on all 199 training movies: **+0.007 private** over the public notebook it was built on |
 | **Setting** | Solo, joined 9 days before the deadline · 30 GPU h/week · 5 submissions/day |
 | **Process** | An automated launch → submit → score loop over 37 scored submissions |
+| **On Kaggle** | [Solution write-up](https://www.kaggle.com/competitions/biohub-cell-tracking-during-development/writeups/183rd-place-solution-retraining-the-coordinate-re) · notebooks: [capture A](https://www.kaggle.com/code/ryotakawamura94/biohub-cap-a), [capture B](https://www.kaggle.com/code/ryotakawamura94/biohub-cap-b) → [head training](https://www.kaggle.com/code/ryotakawamura94/biohub-headtrain) → [final submission](https://www.kaggle.com/code/ryotakawamura94/biohub-b11-khead4) |
 
 ## The task
 
