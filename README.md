@@ -56,13 +56,20 @@ trained on 20 movies. I captured detector features on all **199 training movies*
 (111k detection–ground-truth pairs) and retrained it, validating **by movie** so no
 movie appears in both train and validation.
 
-- Held-out centre error dropped from **1.33 µm to 1.06 µm**.
+![the pipeline on one training frame, before and after the retrained head](docs/images/real_pipeline.png)
+
+- Held-out centre error dropped from **1.33 µm to 1.06 µm**, better on 158 of 199 movies.
 - The first submission scored *lower* (0.943). The cause: the head was trained in the
   voxel-centre frame, but the notebook writes coordinates without the centre offset.
   Retraining in the output frame fixed it (b11, 0.953 public / 0.924 private).
 - Scaling the learned shift up or down after training only lost score, on both leaderboards.
 
+![held-out error per movie and per detection](docs/images/heldout_errors.png)
+
 ![coordinate head: held-out error and shift-scale sweep](docs/images/coordinate_head.png)
+
+The real-data figures are drawn by `scripts/plot_realdata.py` from the material that
+[`notebooks/writeupfigs`](notebooks/writeupfigs/build.py) extracts on Kaggle (CPU).
 
 ## Pipeline
 
