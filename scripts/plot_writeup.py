@@ -39,7 +39,7 @@ def banner():
             fontweight="bold")
     ax.text(0.5, 2.35, "Retraining one small head, measured by held-out movie", fontsize=19, color=INK,
             fontweight="bold")
-    tiles = [("183rd", "of 4,017 teams", SILVER, "silver medal"),
+    tiles = [("181st", "of 3,947 teams", SILVER, "silver medal"),
              ("0.924", "private LB", BLUE, "final score"),
              ("+0.007", "private vs. base", BLUE, "public: tied at 0.953"),
              ("1.33 → 1.06", "µm centre error", BLUE, "held-out, by movie")]

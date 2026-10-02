@@ -25,7 +25,7 @@ def code(s):
 
 
 md("""
-# Biohub 183rd place: real-data material for the write-up figures
+# Biohub 181st place: real-data material for the write-up figures
 
 Retrains the coordinate-refinement head by held-out movie (4 folds, as in `biohub-headtrain`)
 and saves `figdata.npz`: max-projection crops of a few training movies, the detector centres

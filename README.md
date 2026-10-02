@@ -5,7 +5,7 @@
 **Detecting and tracking every cell in 3D + time microscopy of zebrafish embryos**
 
 [![Silver medal](https://img.shields.io/badge/Kaggle-Silver%20medal-a8a9ad?logo=kaggle&logoColor=white)](https://www.kaggle.com/competitions/biohub-cell-tracking-during-development/leaderboard)
-[![Rank](https://img.shields.io/badge/rank-183%20%2F%204%2C017-2a78d6)](https://www.kaggle.com/competitions/biohub-cell-tracking-during-development/leaderboard)
+[![Rank](https://img.shields.io/badge/rank-181%20%2F%203%2C947-2a78d6)](https://www.kaggle.com/competitions/biohub-cell-tracking-during-development/leaderboard)
 [![Private LB](https://img.shields.io/badge/private%20LB-0.924-2a78d6)](#result)
 ![Python](https://img.shields.io/badge/Python-3.12-3776ab?logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-3D%20U--Net-ee4c2c?logo=pytorch&logoColor=white)
@@ -17,7 +17,7 @@
 
 | | |
 |---|---|
-| **Result** | 🥈 **Silver medal** — rank **183 of 4,017** teams (top 5%), private LB **0.924** |
+| **Result** | 🥈 **Silver medal** — rank **181 of 3,947** teams (top 5%), private LB **0.924** |
 | **What made the difference** | Retraining the coordinate-refinement head on all 199 training movies: **+0.007 private** over the public notebook it was built on |
 | **Setting** | Solo, joined 9 days before the deadline · 30 GPU h/week · 5 submissions/day |
 | **Process** | An automated launch → submit → score loop over 37 scored submissions |

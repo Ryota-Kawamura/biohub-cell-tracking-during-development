@@ -194,3 +194,6 @@ truth best with a +0.375-cell centre offset on y and x. Launched `biohub-b10-khe
 - Private LB 0.924, rank 183 of 4,017, Silver medal (confirmed by Kaggle). Selected: b11-khead4 (private 0.924) and k953 (0.917).
 - The retrained head (b11) tied k953 on public but beat it by +0.007 on private, matching the held-out residual gain (1.06 vs 1.33 um).
 - Best unselected: b12-khead4combo 0.929 (public tie at 0.953, so no signal to pick it).
+
+## 2026-10-02 — leaderboard finalised
+- Kaggle removed disqualified teams from the final leaderboard: rank 183 of 4,017 → **181 of 3,947** (score unchanged, 0.92404). Still Silver medal.
